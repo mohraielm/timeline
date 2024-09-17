@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessible Computing Timeline</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7e6e8; 
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-size: 400px 400px;
+            background-repeat: repeat;
+        }
+        h1{
+            background-color: #f6eafa;
+            border: 1px solid #e7a3f5; 
+            text-align: center;
+        }
+
+        .timeline {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+        }
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: #f5a3b6; /* Pastel pink line */
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .timeline-item {
+            position: relative;
+            width: 50%;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px; 
+        }
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+        .timeline-item:nth-child(even) {
+            left: 50%;
+        }
+        .timeline-item-content {
+            background-color: #fff;
+            border: 1px solid #f5a3b6; 
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+            max-width: calc(100% - 80px); 
+        }
+        .timeline-item-content::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent #fff;
+            border-left-color: transparent;
+            left: -10px;
+            transform: rotate(45deg);
+        }
+        .timeline-item:nth-child(even) .timeline-item-content::before {
+            left: auto;
+            right: -10px;
+            border-color: transparent transparent transparent #fff;
+            border-right-color: transparent;
+        }
+        .timeline-item-content h3 {
+            margin: 0 0 10px;
+            font-size: 18px;
+            color: #f5a3b6; 
+        }
+        .timeline-item-content p {
+            margin: 0;
+            color: #333;
+        }
+        .timeline-item-image {
+            width: 100px; 
+            height: auto;
+            padding-right: 10px;
+        }
+        .timeline-item:nth-child(even) .timeline-item-image {
+            margin-left: 20px; 
+            margin-right: 0; 
+        }
+    </style>
+</head>
+<body>
+    <h1>History of Accessible Computing</h1>
+    <div class="timeline">
+        <div class="timeline-item">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Babbages_Analytical_Engine%2C_1834-1871._%289660574685%29.jpg" class="timeline-item-image">
+            <div class="timeline-item-content">
+                <h3>Mid-1830s</h3>
+                <p>Charles Babbage developed plans for the Analytical Engine, an early model of a digital computer. It featured punched cards for instructions, a memory unit to store numbers, sequential control for operations, and most of the other basic elements of the present-day computer.</p>
+            </div>
+        </div>        
+        <div class="timeline-item">
+            <img src="https://www.columbia.edu/cu/computinghistory/hollerith+tabulator.jpg"  class="timeline-item-image">
+            <div class="timeline-item-content">
+                <h3>1886</h3>
+                <p>Herman Hollerith developed punch cards for the 1890 census, laying groundwork for data processing systems, leading to IBM.</p>
+            </div>
+        </div>
+        <div class="timeline-item">
+            <img src="https://www.perkins.org/wp-content/uploads/2023/03/archives_ag12_25_0001_talking_books.jpg" class="timeline-item-image">
+            <div class="timeline-item-content">
+                <h3>1935</h3>
+                <p>The American Foundation for the Blind published the first Talking Book Bulletin, promoting books on tape.</p>
+            </div>
+        </div>
+        <div class="timeline-item">
+            <img src="https://cdn.grove.wgbh.org/dims4/default/3d77a54/2147483647/strip/true/crop/3400x2267+0+302/resize/720x480!/quality/90/?url=https%3A%2F%2Fk1-prod-gbh.s3.us-east-2.amazonaws.com%2Fbrightspot%2F0b%2F1f%2Faff7a83fc6994b5a846a79b5727f%2F1972-the-french-chef.jpg" class="timeline-item-image">
+            <div class="timeline-item-content">
+                <h3>1972</h3>
+                <p>The first national open-captioned program aired on PBS (The French Chef with Julia Child).</p>
+            </div>
+        </div>
+        <div class="timeline-item">
+            <img src="https://archive.computerhistory.org/resources/still-image/Cerf-Vinton/cerf_with_modem_and_terminal.c1974.102625115.lg.jpg" class="timeline-item-image">
+            <div class="timeline-item-content">
+                <h3>1972</h3>
+                <p>Vinton Cerf developed early host-level protocols for ARPANET, a precursor to email, and communicated with his wife using text.  It was the first network to implement the packet-switching technique, which breaks data into packets and sends them independently to their destination.</p>
+            </div>
+        </div>
+        <div class="timeline-item">
+            <img src="https://abilitytools.org/blog/wp-content/uploads/2013/10/kurzweil-with-reading-machine.jpg" class="timeline-item-image">
+            <div class="timeline-item-content">
+                <h3>1975</h3>
+                <p>Ray Kurzweil created the Kurzweil Reading Machine and OCR technology, and one of the first CCD scanners.</p>
+            </div>
+        </div>
+        <div class="timeline-item">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/Apple_II_typical_configuration_1977.png"  class="timeline-item-image">
+            <div class="timeline-item-content">
+                <h3>1977</h3>
+                <p>Apple II computer was the first microprocessor disgned specifically for home use.</p>
+            </div>
+        </div>
+        <div class="timeline-item">
+            <img src="https://www.afb.org/serve/media/aw050207f2"  class="timeline-item-image">
+            <div class="timeline-item-content">
+                <h3>1986</h3>
+                <p>Jim Thatcher created the IBM Screen Reader for DOS (Disk Operating System), an early tool that helped people with low vision use computers by reading out the text on the screen.</p>
+            </div>
+        </div>
+        <div class="timeline-item">
+            <img src="https://disabilityphilanthropy.org/wp-content/uploads/2020/06/ADA25march-1.jpg" class="timeline-item-image">
+            <div class="timeline-item-content">
+                <h3>1990</h3>
+                <p>The Americans with Disabilities Act (ADA) was passed, ensuring civil rights protections and accessibility for individuals with disabilities.</p>
+            </div>
+        </div>
+        <div class="timeline-item">
+            <img src="https://www.bungalowsoftware.com/images/control%20panel.gif" class="timeline-item-image">
+            <div class="timeline-item-content">
+                <h3>1995</h3>
+                <p>Windows 95 included built-in accessibility features for the first time such as Sticky keys, FilterKeys, ToggleKeys, Mouse Keys,etc (we will see its improvement from this later in the timeline!).</p>
+            </div>
+        </div>
+        <div class="timeline-item">
+            <img src="https://murf.ai/resources/media/posts/123/text-to-speech.jpg" class="timeline-item-image">
+            <div class="timeline-item-content">
+                <h3>1996</h3>
+                <p>pwWebSpeak was introduced, providing users with a keyboard-based way to navigate web pages. It translated text into speech and supported large print display with customizable colors and sizes.</p>
+            </div>
+        </div>
+        
+        <div class="timeline-item">
+            <img src="https://media.licdn.com/dms/image/C4D22AQGJ4k2l0eXVSg/feedshare-shrink_1280/0/1592588277088?e=2147483647&v=beta&t=1TAXinS8HjjJlnbNg6SyEVwObdrskFpfDcUg_3mYdWM"  class="timeline-item-image">
+            <div class="timeline-item-content">
+                <h3>1997</h3>
+                <p>NCR Corp developed the first audio ATM, accessible to blind or illiterate users.</p>
+            </div>
+        </div>
+        <div class="timeline-item">
+            <img src="https://learn.microsoft.com/en-us/previous-versions/windows/desktop/dnacc/images/atg-samiarticle05.png"  class="timeline-item-image">
+            <div class="timeline-item-content">
+                <h3>1998</h3>
+                <p>Synchronized Accessible Media Exchange (SAMI) was released to simplify captioning and audio description for videos.</p>
+            </div>
+        </div>
+        <div class="timeline-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmK14PX_-2McdNLtXANzGLHhFQqpDJ34Op_g&s"  class="timeline-item-image">
+            <div class="timeline-item-content">
+                <h3>1998</h3>
+                <p>Section 508 was added to the Rehabilitation Act, mandating accessibility requirements for government websites.</p>
+            </div>
+        </div>
+        <div class="timeline-item">
+            <img src="https://media.licdn.com/dms/image/D4D12AQFlIKTnve2oGA/article-cover_image-shrink_720_1280/0/1697141068159?e=2147483647&v=beta&t=i8DKoa8fyOLh4eoQ0P6q-3sTDUz0OkFRxH6JAY0Wb6w"  class="timeline-item-image">
+            <div class="timeline-item-content">
+                <h3>1999</h3>
+                <p>The World Wide Web Consortium (W3C) released Web Content Accessibility Guidelines (WCAG): important for later in the presentation :D.</p>
+            </div>
+        </div>
+        <div class="timeline-item">
+            <img src="https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2d88d6e2-963a-4513-8873-ddc54fec53ff_640x480.png"  class="timeline-item-image">
+            <div class="timeline-item-content">
+                <h3>2000</h3>
+                <p>Windows 2000 was released with an on-screen keyboard and text-to-speech features.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
